@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Todo = mongoose.model('Todo', {
+const Todo = mongoose.model('Todo', {
   text: {
     type: String,
     required: true,
@@ -8,6 +8,10 @@ var Todo = mongoose.model('Todo', {
     trim: true
   },
   completed: {
+    type: Boolean,
+    default: false
+  },
+  deleted: {
     type: Boolean,
     default: false
   },
